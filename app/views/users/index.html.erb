@@ -1,0 +1,13 @@
+<h2>ユーザー一覧</h2>
+<div class="user_index">
+  <% @users.each do |user| %>
+    <%= "No.#{user.id}" %>
+    <%= link_to "#{user.name}", users_path %> 
+    <% if user.gender == 1 %>  
+      男
+    <% else %>
+      女
+    <% end %>
+    <%= "#{user.age}歳" %>
+  <% end %>
+<end>

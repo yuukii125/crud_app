@@ -1,0 +1,13 @@
+<h3>新規登録</h3>
+<div class="user_new">
+  <%= form_with url: create_path do |f| %>
+    <%= f.label :name, "名前" %>
+    <%= f.text_field :name %>
+    <%= f.label :gender, "性別" %>
+    <%= f.radio_button :gender, 1 %>男
+    <%= f.radio_button :gender, 2 %>女
+    <%= f.label :age, "年齢" %>
+    <%= f.text_field :age %>
+    <%= f.submit "登録" %>
+  <% end %>
+<end>
