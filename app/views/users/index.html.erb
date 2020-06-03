@@ -2,7 +2,7 @@
 <div class="user_index">
   <% @users.each do |user| %>
     <%= "No.#{user.id}" %>
-    <%= link_to "#{user.name}", show_path(user) %> 
+    <%= link_to "#{user.name}", user_path(user) %> 
     <%= "#{user.age}歳" %>
   <% end %>
 <end>
