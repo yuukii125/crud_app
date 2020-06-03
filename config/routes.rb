@@ -3,16 +3,16 @@ Rails.application.routes.draw do
   get "/", to: "users#index", as: :users
 
   #新規登録
-  get "/new", to: "users#new", as: :new
-  post "/create", to: "users#create", as: :create
+  get "/users/new", to: "users#new", as: :new
+  post "/users", to: "users#create", as: :create
 
   #ユーザー詳細
-  get "/show/:id", to: "users#show", as: :show
+  get "/users/:id", to: "users#show", as: :show
 
   #編集
-  get "/edit/:id", to: "users#edit", as: :edit
-  post "/update/:id", to: "users#update", as: :update
+  get "/users/:id/edit", to: "users#edit", as: :edit
+  post "/users/:id", to: "users#update", as: :update
 
   #削除
-  post "/destroy/:id", to: "users#destroy", as: :destroy
+  post "/users/:id", to: "users#destroy", as: :destroy
 end

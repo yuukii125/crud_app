@@ -1,0 +1,11 @@
+<h2>ユーザー編集</h2>
+
+<div class="user_edit">
+  <%= form_with url: update_path, local: true do |f| %>
+    <%= f.label :name, "名前" %>
+    <%= f.text_field :name, value: @user.name %>
+    <%= f.label :age, "年齢" %>
+    <%= f.text_field :age, value: @user.age %>
+    <%= f.submit "登録" %>
+  <% end %>
+<end>

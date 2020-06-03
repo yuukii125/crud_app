@@ -3,7 +3,6 @@
   <% @users.each do |user| %>
     <%= "No.#{user.id}" %>
     <%= link_to "#{user.name}", show_path(user) %> 
-    <%= user.gender %>
     <%= "#{user.age}歳" %>
   <% end %>
 <end>

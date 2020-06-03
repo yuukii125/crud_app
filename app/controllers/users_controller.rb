@@ -12,18 +12,27 @@ class UsersController < ApplicationController
   end
 
   def create
-    if User.create(user_params)
-      redirect_to users_url
-    else
-      render
-    end
+    User.create(user_params)
+    redirect_to users_url
   end
 
   #ユーザー詳細
   def show
     @user = User.find(params[:id])
   end
+
+  #編集
+  def edit
+    @user = User.find(params[:id])
+  end
   
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    redirect_to users_path
+  end
+  
+
   #削除
   def destroy
     @user = User.find(params[:id])
@@ -35,7 +44,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.permit(:name, :gender, :age)
+      params.permit(:name, :age)
     end
   
   
