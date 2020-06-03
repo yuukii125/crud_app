@@ -1,8 +1,8 @@
 <h2>ユーザー詳細</h2>
-
+<%= "No.#{@user.id}" %>
 <%= @user.name %>
 <%= @user.age %>歳
 
 <%= link_to "一覧へ戻る", users_path %> 
-<%= link_to "編集", edit_path(@user) %> 
-<%= link_to "削除", destroy_path(@user), method: :post, data: { confirm: "削除しますか？" } %>
+<%= link_to "編集", edit_user_path(@user) %> 
+<%= link_to "削除", user_path(@user), method: :delete, data: { confirm: "削除しますか？" } %>
