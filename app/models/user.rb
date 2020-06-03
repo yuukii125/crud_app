@@ -1,3 +1,4 @@
 class User < ApplicationRecord
-  #条件
+  
+  enum gender: {"男": 1, "女": 2}
 end

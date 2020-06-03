@@ -19,6 +19,18 @@ class UsersController < ApplicationController
     end
   end
 
+  #ユーザー詳細
+  def show
+    @user = User.find(params[:id])
+  end
+  
+  #削除
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to users_url
+  end
+  
 
   private
 

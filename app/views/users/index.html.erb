@@ -2,12 +2,8 @@
 <div class="user_index">
   <% @users.each do |user| %>
     <%= "No.#{user.id}" %>
-    <%= link_to "#{user.name}", users_path %> 
-    <% if user.gender == 1 %>  
-      男
-    <% else %>
-      女
-    <% end %>
+    <%= link_to "#{user.name}", show_path(user) %> 
+    <%= user.gender %>
     <%= "#{user.age}歳" %>
   <% end %>
 <end>
